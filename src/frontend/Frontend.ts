@@ -211,11 +211,11 @@ Module.register<Config>('MMM-RAIN-MAP', {
     const nextTimeframe = this.runtimeData.timeframes[nextAnimationPosition]
     const nextRadarLayer = this.runtimeData.radarLayers[nextTimeframe.time]
 
-    if (nextRadarLayer) {
-      nextRadarLayer.setOpacity(1)
-    }
     if (currentRadarLayer) {
       currentRadarLayer.setOpacity(0.001)
+    }
+    if (nextRadarLayer) {
+      nextRadarLayer.setOpacity(1)
     }
 
     // Manage time
